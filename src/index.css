@@ -1,0 +1,164 @@
+/* Bootstrap CSS Import */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom CSS Variables for Dark Mode */
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+  --bs-card-bg: #ffffff;
+  --bs-border-color: #dee2e6;
+  --bs-secondary-bg: #f8f9fa;
+  --custom-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --custom-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #1a1a1a;
+  --bs-body-color: #ffffff;
+  --bs-card-bg: #2d2d2d;
+  --bs-border-color: #495057;
+  --bs-secondary-bg: #343a40;
+  --custom-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  --custom-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  background-color: #9d09e8;
+}
+
+.common-bg {
+  background-color: #9d09e8;
+}
+
+.add-task-btn {
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+.card {
+  background-color: var(--bs-card-bg);
+  border-color: var(--bs-border-color);
+  box-shadow: var(--custom-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--custom-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.task-column {
+  background-color: var(--bs-secondary-bg);
+  border-radius: 0.5rem;
+  min-height: 500px;
+  transition: background-color 0.3s ease;
+}
+
+.task-card {
+  cursor: grab;
+  transition: all 0.2s ease;
+  border-left: 4px solid;
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card.priority-high {
+  border-left-color: #dc3545;
+}
+
+.task-card.priority-medium {
+  border-left-color: #ffc107;
+}
+
+.task-card.priority-low {
+  border-left-color: #28a745;
+}
+
+.priority-badge.priority-high {
+  background-color: #dc3545;
+}
+
+.priority-badge.priority-medium {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.priority-badge.priority-low {
+  background-color: #28a745;
+}
+
+.drag-overlay {
+  opacity: 0.8;
+  transform: rotate(5deg);
+}
+
+.droppable-area {
+  min-height: 100px;
+  border: 2px dashed transparent;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.droppable-area.drag-over {
+  border-color: #9d09e8;
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.filter-tabs .nav-link {
+  color: #ffffff;
+  border-radius: 0.5rem;
+  margin: 0 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.filter-tabs .nav-link.active {
+  background-color: #9d09e8;
+  color: white;
+}
+
+.due-date-warning {
+  color: #fd7e14;
+}
+
+.due-date-danger {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .task-column {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
