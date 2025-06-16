@@ -22,13 +22,7 @@ A feature-rich and modern To-Do web application built with **React.js** and **Bo
 - **State Management**: React `useState`
 - **Storage**: Browser `localStorage`
 - **Deployment**: Vercel
-
----
-
-## 📸 Screenshots
-
-![Trackwise To-Do](https://your-screenshot-link-if-any.com)
-
+- 
 ---
 
 ## 📦 Installation (for local setup)
